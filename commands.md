@@ -22,4 +22,14 @@
 20) select*from TB_NAME where gender="male" OR salary>70000 ORDER BY COL_NAME ASC;
 21) select*from TB_NAME where gender="male" OR salary>70000 ORDER BY COL_NAME DESC;
 22) select*from TB_NAME where gender="male" OR salary>70000 ORDER BY COL_NAME DESC LIMIT 5;
-23)  
+23) UPDATE TB_NAME set salary=45000 where id=1;
+24) DELETE from TB_NAME where id=25;
+25) DROP table TB_NAME;
+26) select COUNT(*) from TB_NAME;
+27) select MIN(salary) AS Min_Salary, MAX(salary) AS Max_Salary from TB_NAME;
+28) select SUM(salary) AS Toatl from TB_NAME;
+29) select AVG(salary) AS Average from TB_NAME;
+30) select gender,SUM(salary) AS avg from TB_NAME GROUP BY gender;
+31) select gender,name, LENGTH(name) AS name_len from TB_NAME;
+32) select id,gender,LOWER(name) AS lower,CONCAT(LOWER(name),"5677") AS username from TB_NAME;
+33) 
