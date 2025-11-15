@@ -14,4 +14,7 @@
 12) alter table TB_NAME MODIFY column COL_NAME CHANGE_DATA_TYPE(varchar(150));
 13) alter table TB_NAME MODIFY column COL3 DATA_TYPE after COL1;
 14) insert into TB_NAME values(1,"Gajanan","demo@gmail.com");
-15) 
+15) select*from TB_NAME where CONDITION(id<3);
+16) select*from TB_NAME where id BETWEEN 1 AND 4;
+17) select*from users where id IN(1,4);
+18) 
