@@ -16,5 +16,10 @@
 14) insert into TB_NAME values(1,"Gajanan","demo@gmail.com");
 15) select*from TB_NAME where CONDITION(id<3);
 16) select*from TB_NAME where id BETWEEN 1 AND 4;
-17) select*from users where id IN(1,4);
-18) 
+17) select*from TB_NAME where id IN(1,4);
+18) select*from TB_NAME where gender="male" AND salary>70000;
+19) select*from TB_NAME where gender="male" OR salary>70000;
+20) select*from TB_NAME where gender="male" OR salary>70000 ORDER BY COL_NAME ASC;
+21) select*from TB_NAME where gender="male" OR salary>70000 ORDER BY COL_NAME DESC;
+22) select*from TB_NAME where gender="male" OR salary>70000 ORDER BY COL_NAME DESC LIMIT 5;
+23)  
