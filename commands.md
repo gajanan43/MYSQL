@@ -32,4 +32,9 @@
 30) select gender,SUM(salary) AS avg from TB_NAME GROUP BY gender;
 31) select gender,name, LENGTH(name) AS name_len from TB_NAME;
 32) select id,gender,LOWER(name) AS lower,CONCAT(LOWER(name),"5677") AS username from TB_NAME;
-33) 
+33) select student.name,student.gender,addresses.city,addresses.state from student INNER JOIN addresses ON student.id=addresses.user_id;
+34) select student.name,student.gender,addresses.city,addresses.state from student LEFT JOIN addresses ON student.id=addresses.user_id;
+35) select student.name,student.gender,addresses.city,addresses.state from student RIGHT JOIN addresses ON student.id=addresses.user_id;
+36) select name from student UNION  select name from admin_users;  -> show single list of unique names;
+37) select name from student UNION ALL  select name from admin_users;  -> show single list of duplicate names;
+38) 
