@@ -1,9 +1,9 @@
 # Commands:
 
 1) create database DB_NAME;
-2) use DB_NAME;
-3) show databases;
-4) drop database DB_NAME
+2) USE DB_NAME;
+3) SHOW databases;
+4) DROP database DB_NAME
 5) create table users(id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50) NOT NULL,email VARCHAR(50) UNIQUE NOT NULL);
 6) show tables;
 7) select*from TB_NAME;
@@ -37,4 +37,12 @@
 35) select student.name,student.gender,addresses.city,addresses.state from student RIGHT JOIN addresses ON student.id=addresses.user_id;
 36) select name from student UNION  select name from admin_users;  -> show single list of unique names;
 37) select name from student UNION ALL  select name from admin_users;  -> show single list of duplicate names;
-38) 
+38) create VIEW rich_users AS select*from student where salary>70000;
+39) DROP view rich_users;
+40) show INDEXES from TB_NAME;
+41) select*from student where salary > (select avg(salary) from student);  -> show users how have more salary than average salary
+42) select gender,avg(salary) from student GROUP BY gender;
+43) select gender,AVG(salary) AS 'average', COUNT(*) AS 'Count' from student GROUP BY gender;
+44) select gender,AVG(salary) AS 'average', COUNT(*) AS 'Count' from student GROUP BY gender HAVING AVG(salary)>62000;
+45) select gender,AVG(salary) AS 'average', COUNT(*) AS 'Count' from student WHERE id<15 GROUP BY gender HAVING AVG(salary)>62000;
+    
