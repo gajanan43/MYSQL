@@ -45,4 +45,13 @@
 43) select gender,AVG(salary) AS 'average', COUNT(*) AS 'Count' from student GROUP BY gender;
 44) select gender,AVG(salary) AS 'average', COUNT(*) AS 'Count' from student GROUP BY gender HAVING AVG(salary)>62000;
 45) select gender,AVG(salary) AS 'average', COUNT(*) AS 'Count' from student WHERE id<15 GROUP BY gender HAVING AVG(salary)>62000;
+46) select *from student where name LIKE 'a%'; -> All name start with A Letter
+47) select *from student where name LIKE '%a'; -> All name END with A Letter
+48) select *from student where name LIKE '_a%'; -> All name start with  A at SECOND Letter
+49) select*from student ORDER BY id LIMIT 5;    -> show only top 5 ROWS
+50) select*from student ORDER BY id LIMIT 5 OFFSET 10; -> show only top 5 ROWS after 10 rows(11,12,13,14,15);
+51) select DISTINCT gender from student;
+52) TRUNCATE table addresses; -> Only remove all the rows(keep table structure)
+53) ALTER table student CHANGE name fname varchar(50); -> change the name column to fname
+54) ALTER table student MODIFY COLUMN salary BIGINT; -> modify the salary column DATA_TYPE
     
